@@ -21,10 +21,7 @@ APPLICATION_BINARY_DIR:PATH=C:/Users/Arvind/zephyrproject/zephyr/FW_Zephyr_IG_LT
 APPLICATION_SOURCE_DIR:PATH=C:/Users/Arvind/zephyrproject/zephyr/FW_Zephyr_IG_LTE
 
 //Selected board
-BOARD:STRING=esp32_devkitc_wrover
-
-//Deprecated BOARD, provided by user
-BOARD_DEPRECATED:STRING=esp32_devkitc_wrover
+BOARD:STRING=esp32_devkitc_wrover/esp32/procpu
 
 //Board directory for board (esp32_devkitc_wrover)
 BOARD_DIR:PATH=C:/Users/Arvind/zephyrproject/zephyr/boards/espressif/esp32_devkitc_wrover
@@ -42,7 +39,7 @@ BYPRODUCT_KERNEL_BIN_NAME:FILEPATH=C:/Users/Arvind/zephyrproject/zephyr/FW_Zephy
 BYPRODUCT_KERNEL_ELF_NAME:FILEPATH=C:/Users/Arvind/zephyrproject/zephyr/FW_Zephyr_IG_LTE/build/zephyr/zephyr.elf
 
 //Selected board
-CACHED_BOARD:STRING=esp32_devkitc_wrover
+CACHED_BOARD:STRING=esp32_devkitc_wrover/esp32/procpu
 
 //Selected shield
 CACHED_SHIELD:STRING=

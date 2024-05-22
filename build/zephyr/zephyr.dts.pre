@@ -549,6 +549,17 @@
 
  uart0_default: uart0_default {
   group1 {
+   pinmux = <(((1 & 0x3FU) << 0U) | ((0x1FFU & 0x1FFU) << 6U) | ((14 & 0x1FFU) << 15U))>;
+   output-high;
+  };
+  group2 {
+   pinmux = <(((3 & 0x3FU) << 0U) | ((14 & 0x1FFU) << 6U) | ((0x1FFU & 0x1FFU) << 15U))>;
+   bias-pull-up;
+  };
+ };
+
+ uart0_modem: uart0_modem {
+  group1 {
    pinmux = <(((4 & 0x3FU) << 0U) | ((0x1FFU & 0x1FFU) << 6U) | ((14 & 0x1FFU) << 15U))>,
       <(((5 & 0x3FU) << 0U) | ((0x1FFU & 0x1FFU) << 6U) | ((15 & 0x1FFU) << 15U))>;
    output-high;
@@ -566,6 +577,16 @@
   };
   group2 {
    pinmux = <(((9 & 0x3FU) << 0U) | ((17 & 0x1FFU) << 6U) | ((0x1FFU & 0x1FFU) << 15U))>;
+   bias-pull-up;
+  };
+ };
+
+ uart1_modbus: uart1_modbus {
+  group1 {
+   pinmux = <(((19 & 0x3FU) << 0U) | ((0x1FFU & 0x1FFU) << 6U) | ((17 & 0x1FFU) << 15U))>;
+  };
+  group2 {
+   pinmux = <(((35 & 0x3FU) << 0U) | ((17 & 0x1FFU) << 6U) | ((0x1FFU & 0x1FFU) << 15U))>;
    bias-pull-up;
   };
  };
@@ -626,6 +647,7 @@
 
  aliases {
   uart-0 = &uart0;
+  uart-1 = &uart1;
   i2c-0 = &i2c0;
   sw0 = &button0;
   watchdog0 = &wdt0;
@@ -660,14 +682,21 @@
 &uart0 {
  status = "okay";
  current-speed = <115200>;
- pinctrl-0 = <&uart0_default>;
+ pinctrl-0 = <&uart0_modem>;
  pinctrl-names = "default";
 };
 
 &uart1 {
+ status = "okay";
  current-speed = <115200>;
- pinctrl-0 = <&uart1_default>;
+ pinctrl-0 = <&uart1_modbus>;
  pinctrl-names = "default";
+
+ modbus0 {
+  compatible = "zephyr,modbus-serial";
+  status = "okay";
+
+ };
 };
 
 &uart2 {

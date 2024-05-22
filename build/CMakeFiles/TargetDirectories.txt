@@ -115,6 +115,7 @@ C:/Users/Arvind/zephyrproject/zephyr/FW_Zephyr_IG_LTE/build/zephyr/subsys/mem_mg
 C:/Users/Arvind/zephyrproject/zephyr/FW_Zephyr_IG_LTE/build/zephyr/subsys/mem_mgmt/CMakeFiles/rebuild_cache.dir
 C:/Users/Arvind/zephyrproject/zephyr/FW_Zephyr_IG_LTE/build/zephyr/subsys/mgmt/CMakeFiles/edit_cache.dir
 C:/Users/Arvind/zephyrproject/zephyr/FW_Zephyr_IG_LTE/build/zephyr/subsys/mgmt/CMakeFiles/rebuild_cache.dir
+C:/Users/Arvind/zephyrproject/zephyr/FW_Zephyr_IG_LTE/build/zephyr/subsys/modbus/CMakeFiles/subsys__modbus.dir
 C:/Users/Arvind/zephyrproject/zephyr/FW_Zephyr_IG_LTE/build/zephyr/subsys/modbus/CMakeFiles/edit_cache.dir
 C:/Users/Arvind/zephyrproject/zephyr/FW_Zephyr_IG_LTE/build/zephyr/subsys/modbus/CMakeFiles/rebuild_cache.dir
 C:/Users/Arvind/zephyrproject/zephyr/FW_Zephyr_IG_LTE/build/zephyr/subsys/pm/CMakeFiles/edit_cache.dir

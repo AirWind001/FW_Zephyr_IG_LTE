@@ -17,6 +17,7 @@
 	};
 	aliases {
 		uart-0 = &uart0;
+		uart-1 = &uart1;
 		i2c-0 = &i2c0;
 		sw0 = &button0;
 		watchdog0 = &wdt0;
@@ -136,7 +137,7 @@
 			clocks = < &rtc 0x1 >;
 			status = "okay";
 			current-speed = < 0x1c200 >;
-			pinctrl-0 = < &uart0_default >;
+			pinctrl-0 = < &uart0_modem >;
 			pinctrl-names = "default";
 		};
 		uart1: uart@3ff50000 {
@@ -145,10 +146,14 @@
 			interrupts = < 0x23 >;
 			interrupt-parent = < &intc >;
 			clocks = < &rtc 0x2 >;
-			status = "disabled";
+			status = "okay";
 			current-speed = < 0x1c200 >;
-			pinctrl-0 = < &uart1_default >;
+			pinctrl-0 = < &uart1_modbus >;
 			pinctrl-names = "default";
+			modbus0 {
+				compatible = "zephyr,modbus-serial";
+				status = "okay";
+			};
 		};
 		uart2: uart@3ff6e000 {
 			compatible = "espressif,esp32-uart";
@@ -444,6 +449,16 @@
 		compatible = "espressif,esp32-pinctrl";
 		status = "okay";
 		uart0_default: uart0_default {
+			group1 {
+				pinmux = < 0x77fc1 >;
+				output-high;
+			};
+			group2 {
+				pinmux = < 0xff8383 >;
+				bias-pull-up;
+			};
+		};
+		uart0_modem: uart0_modem {
 			phandle = < 0x4 >;
 			group1 {
 				pinmux = < 0x77fc4 >, < 0x7ffc5 >;
@@ -455,12 +470,21 @@
 			};
 		};
 		uart1_default: uart1_default {
-			phandle = < 0x5 >;
 			group1 {
 				pinmux = < 0x8ffca >;
 			};
 			group2 {
 				pinmux = < 0xff8449 >;
+				bias-pull-up;
+			};
+		};
+		uart1_modbus: uart1_modbus {
+			phandle = < 0x5 >;
+			group1 {
+				pinmux = < 0x8ffd3 >;
+			};
+			group2 {
+				pinmux = < 0xff8463 >;
 				bias-pull-up;
 			};
 		};

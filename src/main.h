@@ -6,5 +6,6 @@
 
 #include <zephyr/device.h>
 #include <zephyr/drivers/gpio.h>
+#include <zephyr/logging/log.h>
 int main(void);
 #endif /* MAIN_MAIN_H_ */

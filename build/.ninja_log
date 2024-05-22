@@ -258,3 +258,8 @@
 1200	1744	7380738557083652	C:/Users/Arvind/zephyrproject/zephyr/FW_Zephyr_IG_LTE/build/zephyr/zephyr.stat	a946f02a9692984a
 1745	2062	0	zephyr/CMakeFiles/check_init_priorities	d5a2fd0e26dfe415
 1745	2062	0	C:/Users/Arvind/zephyrproject/zephyr/FW_Zephyr_IG_LTE/build/zephyr/CMakeFiles/check_init_priorities	d5a2fd0e26dfe415
+533	2113	7381177438288229	CMakeFiles/app.dir/src/modbus_IG/modbus_IG.c.obj	f2a97aef5a7b6338
+538	2115	7381177438288229	CMakeFiles/app.dir/src/modem_IG/modem_IG.c.obj	4c1c2d1dba62306b
+482	1045	7381181697483272	CMakeFiles/app.dir/src/main.c.obj	17d042d35214014b
+446	926	7381183773362696	CMakeFiles/app.dir/src/mqtt_IG/mqtt_IG.c.obj	1eb8dc81b7f33c8e
+929	1244	7381183776544149	app/libapp.a	f37c989ef5bbdee5
